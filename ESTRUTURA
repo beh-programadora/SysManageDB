@@ -1,0 +1,24 @@
+sistemadegerenciamento/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── SRC/
+│   ├── create_database.sql
+│   ├── insert_data.sql
+│   ├── queries.sql
+│   ├── connection.py
+│   ├── main.py
+│   ├── utils/
+│       ├── data_analysis.py
+│       ├── report_generator.py
+│       └── visualizations.py
+├── dataset/
+│   ├── example_data.csv
+│   └── additional_data.xlsx
+└── results/
+    ├── insights.md
+    ├── graphs/
+    │   ├── department_salary_distribution.png
+    │   ├── project_progress_pie.png
+    │   └── tasks_status_bar.png
