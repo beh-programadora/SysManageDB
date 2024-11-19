@@ -1,0 +1,40 @@
+# Ambientes Virtuais
+env/
+venv/
+*.egg-info/
+
+# Arquivos gerados automaticamente pelo Python
+__pycache__/
+*.py[cod]
+
+# Arquivos de configuração do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de Log
+*.log
+
+# Dados e Resultados
+dataset/*.csv
+dataset/*.xlsx
+results/*.png
+results/*.md
+
+# Arquivos de Backup
+*.bak
+*.sql~
+
+# Arquivos Sensíveis (por exemplo, credenciais ou variáveis de ambiente)
+.env
+*.key
+*.pem
+
+# Arquivos gerados por IDEs e editores
+.vscode/
+.idea/
+*.iml
+
+# Outros
+*.tmp
+*.cache
+*.swp
