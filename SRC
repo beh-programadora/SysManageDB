@@ -1,0 +1,57 @@
+create database sistemadegerenciamento;
+
+USE sistemadegerenciamento;
+
+create table departamentos
+ ( id_departamento int primary key auto_increment, 
+ nome_departamento VARCHAR (100) NOT NULL,
+ localização_departamento  VARCHAR (100)
+ );
+
+CREATE TABLE funcionarios (
+ id_funcionario INT auto_increment 
+ primary key, 
+ nome_funcionario VARCHAR (100) NOT NULL, 
+ cargo varchar(50),
+ salario decimal(10, 2),
+ data_contratação date,
+ id_departamento int,
+ FOREIGN KEY (id_departamento) REFERENCES 
+ departamentos(id_departamento)
+ on DELETE SET NULL ON UPDATE CASCADE  
+ 
+ );
+
+
+create table projetos (
+  id_projeto int auto_increment primary key,
+ nome_projeto VARCHAR (100) NOT NULL,
+ descricao_projeto TEXT,
+ data_inicio date,
+ data_fim date,
+ id_departamento int, 
+ FOREIGN KEY (id_departamento) REFERENCES 
+ departamentos(id_departamento) 
+ ON DELETE SET NULL ON UPDATE CASCADE   
+ 
+ );
+ 
+ create table tarefas (
+ id_tarefa INT AUTO_INCREMENT PRIMARY KEY,
+ nome_tarefa VARCHAR (100) NOT NULL,
+ descricao_tarefa TEXT,
+ data_inicio DATE,
+ data_prazo DATE,
+ status_tarefa ENUM('pendente' , 'em progresso' , 'concluida') DEFAULT 'pendente',
+ id_projeto INT,
+ id_funcionario INT, 
+ FOREIGN KEY ( id_projeto) REFERENCES 
+ projetos(id_projeto)
+ ON DELETE CASCADE ON UPDATE CASCADE,
+ 
+ FOREIGN KEY (id_funcionario) REFERENCES
+ funcionarios(id_funcionario)
+ 
+ ON DELETE SET NULL ON UPDATE CASCADE 
+ 
+ );
