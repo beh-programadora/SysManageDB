@@ -1,0 +1,12 @@
+O diretório dataset/ conterá:
+
+example_data.csv: Dados fictícios para testes iniciais.
+additional_data.xlsx: Dados adicionais para análises.
+Exemplo de example_data.csv:
+id_departamento,nome_departamento,localizacao_departamento
+1,TI,Florianópolis
+2,Recursos Humanos,São Paulo
+
+id_funcionario,nome_funcionario,cargo,salario,data_contratacao,id_departamento
+1,Ana Silva,Analista de TI,7000.00,2022-03-15,1
+2,João Santos,Gerente de RH,8500.00,2020-06-20,2
